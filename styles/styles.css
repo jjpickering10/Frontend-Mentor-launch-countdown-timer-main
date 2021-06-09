@@ -9,4 +9,134 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  background-color: #343650;
+  background-image: url(../images/bg-stars.svg);
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100px;
+}
+
+.days-box,
+.seconds-box,
+.minutes-box,
+.hours-box,
+.time-top {
+  position: relative;
+  background: red;
+  height: 30%;
+  width: 80%;
+  border-radius: 3px;
+}
+
+.days-box p,
+.seconds-box p,
+.minutes-box p,
+.hours-box p {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fb6087;
+}
+
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.title,
+.countdown,
+.footer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+.countdown {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.countdown h2 {
+  color: #8486a9;
+  font-size: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.25rem;
+  margin-top: 1rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+  width: 100%;
+  padding: 20%;
+  background-image: url(../images/pattern-hills.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=styles.css.map */
