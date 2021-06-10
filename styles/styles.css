@@ -206,4 +206,81 @@ footer svg:focus {
   cursor: pointer;
   fill: #fb6087;
 }
+
+@media (min-width: 600px) {
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    height: 200px;
+    width: 200px;
+  }
+  .days-box,
+  .seconds-box,
+  .minutes-box,
+  .hours-box,
+  .time-top {
+    border-radius: 10px;
+  }
+  .days-box,
+  .seconds-box,
+  .minutes-box,
+  .hours-box {
+    -webkit-box-shadow: 0 0.6rem 0 0 rgba(0, 0, 0, 0.25), inset 0 0.1rem 0 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.6rem 0 0 rgba(0, 0, 0, 0.25), inset 0 0.1rem 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .days-box p,
+  .seconds-box p,
+  .minutes-box p,
+  .hours-box p {
+    font-size: 6rem;
+    opacity: 0.7;
+  }
+  .days-box::before, .days-box::after,
+  .seconds-box::before,
+  .seconds-box::after,
+  .minutes-box::before,
+  .minutes-box::after,
+  .hours-box::before,
+  .hours-box::after {
+    height: 1rem;
+    width: 1rem;
+  }
+  .time-top {
+    -webkit-box-shadow: inset 0 -20rem 0 0 rgba(0, 0, 0, 0.2), inset 0 -0.1rem 0 0 rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 -20rem 0 0 rgba(0, 0, 0, 0.2), inset 0 -0.1rem 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .title {
+    height: 25vh;
+  }
+  .title h1 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 2rem;
+  }
+  .countdown {
+    height: 50vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .countdown h2 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  footer {
+    padding: 0%;
+  }
+  footer .footer-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer-icons svg {
+    margin: 0 1rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
