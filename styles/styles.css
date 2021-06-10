@@ -12,7 +12,7 @@
 
 body {
   font-family: "Red Hat Text", sans-serif;
-  background-color: #343650;
+  background-color: #211a29;
   background-image: url(../images/bg-stars.svg);
 }
 
@@ -35,8 +35,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 .days-box,
@@ -45,10 +45,19 @@ h2 {
 .hours-box,
 .time-top {
   position: relative;
-  background: red;
-  height: 30%;
+  background: #343650;
+  height: 40%;
   width: 80%;
   border-radius: 3px;
+}
+
+.days-box,
+.seconds-box,
+.minutes-box,
+.hours-box {
+  position: relative;
+  -webkit-box-shadow: 0 0.3rem 0 0 rgba(0, 0, 0, 0.25), inset 0 0.1rem 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3rem 0 0 rgba(0, 0, 0, 0.25), inset 0 0.1rem 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .days-box p,
@@ -59,8 +68,40 @@ h2 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: #fb6087;
+  opacity: 0.7;
+}
+
+.days-box::before, .days-box::after,
+.seconds-box::before,
+.seconds-box::after,
+.minutes-box::before,
+.minutes-box::after,
+.hours-box::before,
+.hours-box::after {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background: #211a29;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.days-box::after,
+.seconds-box::after,
+.minutes-box::after,
+.hours-box::after {
+  left: 100%;
+}
+
+.time-top {
+  -webkit-box-shadow: inset 0 -20rem 0 0 rgba(0, 0, 0, 0.2), inset 0 -0.1rem 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 -20rem 0 0 rgba(0, 0, 0, 0.2), inset 0 -0.1rem 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -117,9 +158,9 @@ h2 {
 .countdown h2 {
   color: #8486a9;
   font-size: 0.5rem;
-  text-align: center;
   letter-spacing: 0.25rem;
-  margin-top: 1rem;
+  padding-left: 5%;
+  margin-top: 0.75rem;
 }
 
 footer {
@@ -132,11 +173,37 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 20vh;
+  height: 25vh;
   width: 100%;
   padding: 20%;
   background-image: url(../images/pattern-hills.svg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: 82%;
+}
+
+footer .footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 15vh;
+  width: 100%;
+}
+
+footer svg {
+  fill: #8486a9;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+footer svg:hover,
+footer svg:focus {
+  cursor: pointer;
+  fill: #fb6087;
 }
 /*# sourceMappingURL=styles.css.map */
