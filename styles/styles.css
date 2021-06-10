@@ -37,6 +37,8 @@ h2 {
           align-items: center;
   height: 80px;
   width: 80px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .days-box,
