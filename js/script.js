@@ -72,8 +72,8 @@ function countDown() {
   } else {
     flipDay = countdownDays - 1;
   }
-
-  console.log(flipSecond, flipMinute, flipHour, flipDay);
+  console.log(countdownMinutes, countdownHours, countdownDays);
+  console.log(flipMinute, flipHour, flipDay);
 }
 
 setInterval(countDown, 1000);
