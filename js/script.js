@@ -18,10 +18,14 @@ let flipMinute;
 let flipHour;
 let flipDay;
 
+let newTime = new Date("Thu Jun 27 2021 00:00:00").getTime();
+
 function countDown() {
   const currentTime = new Date().getTime();
-  const newTime = new Date("Thu Jun 25 2021 00:00:00").getTime();
   const countdownTime = newTime - currentTime;
+  if (countdownTime < 1000) {
+    newTime += 1209600000;
+  }
 
   const second = 1000;
   const minute = second * 60;
@@ -72,8 +76,6 @@ function countDown() {
   } else {
     flipDay = countdownDays - 1;
   }
-  console.log(countdownMinutes, countdownHours, countdownDays);
-  console.log(flipMinute, flipHour, flipDay);
 }
 
 setInterval(countDown, 1000);
